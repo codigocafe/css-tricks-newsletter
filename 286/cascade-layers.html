@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cascade Layers</title>
+
+  <style>
+
+  @layer utilities, typography, base;
+
+  @layer base {
+    a {
+      font-weight: 800;
+      color: red;
+    }
+    .link {
+      color: blue;
+    }
+  }
+
+  @layer typography {
+    a {
+      color: green;
+    }
+  }
+
+  @layer utilities {
+    .pink {
+      color: pink;
+    }
+  }
+
+  </style>
+
+</head>
+<body>
+
+  <small>compatível com Chrome Canary e Firefox 97.</small>
+
+  <p><a href="#">Link verde</a></p>
+  <p><a href="#" class="link">Link Vermelho</a></p>
+  <p><a href="#" class="pink">Link rosa</a></p>
+
+</body>
+</html>
