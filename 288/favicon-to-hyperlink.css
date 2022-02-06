@@ -1,0 +1,18 @@
+a {
+  color: blue;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;
+}
+a:hover {
+  color: tomato;
+}
+a:not([href^="https://codigo.cafe"]):after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+  background-image: url(https://cdn.icon-icons.com/icons2/2550/PNG/512/external_link_icon_152621.png);
+  background-size: contain;
+}
